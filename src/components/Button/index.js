@@ -7,12 +7,14 @@ const Button = ({
   classname
 }) => {
   return (
-    <button
-      className={ classname }
-      onClick={ () => onclick()}
-    >
-      { buttonText }
-    </button>
+    <>
+      <button
+        className={ classname }
+        onClick={ () => onclick()}
+      >
+        { buttonText }
+      </button>
+    </>
   );
 };
 

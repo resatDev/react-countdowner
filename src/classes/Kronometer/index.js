@@ -27,6 +27,10 @@ class Kronometer {
     return this.timeInterval;
   }
 
+  stopKronometer = () => {
+    clearInterval(this.timeInterval);
+  }
+
   endKronometer = () => {
     clearInterval(this.timeInterval);
   }

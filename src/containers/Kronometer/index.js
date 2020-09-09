@@ -7,7 +7,8 @@ const NEW_KRONOMETER = new Kronometer(15);
 const {
   getSecond,
   startKronometer,
-  endKronometer
+  endKronometer,
+  stopKronometer
 } = NEW_KRONOMETER;
 
 const KronometerConteiner = () => {
@@ -27,9 +28,14 @@ const KronometerConteiner = () => {
         { DOMSecond }
       </div>
       <Button
-        classname={ 'kronometer start' }
+        classname={ 'kronometer-start' }
         onclick={ startKronometer }
         buttonText={ 'START' }
+      />
+      <Button
+        classname={ 'kronometer-stop' }
+        onclick={ stopKronometer }
+        buttonText={ 'STOP' }
       />
     </>
   );
