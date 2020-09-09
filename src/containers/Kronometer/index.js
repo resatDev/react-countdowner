@@ -9,7 +9,8 @@ const {
   setSecond,
   startKronometer,
   endKronometer,
-  stopKronometer
+  stopKronometer,
+  getFinishKronometerText
 } = NEW_KRONOMETER;
 
 const KronometerConteiner = () => {
@@ -26,7 +27,7 @@ const KronometerConteiner = () => {
         setSecond={ setSecond }
         startKronometer={ startKronometer }
         stopKronometer={ stopKronometer }
-        DOMSecond={ DOMSecond }
+        DOMSecond={ DOMSecond !== 0 ? DOMSecond : getFinishKronometerText() }
       />
     </div>
   );
