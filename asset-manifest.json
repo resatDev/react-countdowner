@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-countdowner/static/css/main.cd38f6f8.chunk.css",
+    "main.js": "/react-countdowner/static/js/main.b8e74240.chunk.js",
+    "main.js.map": "/react-countdowner/static/js/main.b8e74240.chunk.js.map",
+    "runtime-main.js": "/react-countdowner/static/js/runtime-main.e432b09d.js",
+    "runtime-main.js.map": "/react-countdowner/static/js/runtime-main.e432b09d.js.map",
+    "static/js/2.5003f05a.chunk.js": "/react-countdowner/static/js/2.5003f05a.chunk.js",
+    "static/js/2.5003f05a.chunk.js.map": "/react-countdowner/static/js/2.5003f05a.chunk.js.map",
+    "index.html": "/react-countdowner/index.html",
+    "precache-manifest.0addb6458a69aff37de16f9933981b5f.js": "/react-countdowner/precache-manifest.0addb6458a69aff37de16f9933981b5f.js",
+    "service-worker.js": "/react-countdowner/service-worker.js",
+    "static/css/main.cd38f6f8.chunk.css.map": "/react-countdowner/static/css/main.cd38f6f8.chunk.css.map",
+    "static/js/2.5003f05a.chunk.js.LICENSE.txt": "/react-countdowner/static/js/2.5003f05a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e432b09d.js",
+    "static/js/2.5003f05a.chunk.js",
+    "static/css/main.cd38f6f8.chunk.css",
+    "static/js/main.b8e74240.chunk.js"
+  ]
+}
