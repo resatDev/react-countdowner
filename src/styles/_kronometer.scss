@@ -13,5 +13,13 @@ $background_color: #d4ebff;
   .kronometer-wrapper {
     width: 50%;
     height: 50%;
+
+    .kronometer-buttons {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
   }
 }

@@ -21,30 +21,32 @@ const KronometerConteiner = () => {
   }, 1000);
 
   return (
-    <div className='kronometer-container'>
+    <div className="kronometer-container">
       <div className="kronometer-wrapper">
         <div className="kronometer-texts">
           <TextBox
             title={ 'Kronometer' }
             definition={ 'This is basic kronometer for right now!' }
-            DOMSecond={ DOMSecond }
+            DOMSecond={ DOMSecond || 0}
           />
         </div>
         <Input
           classname={ 'kronometer-input'}
           onblur={ (userTime) => setSecond(userTime)}
-          placeholder={ 'Please type second for kronometer' }
+          placeholder={ 'Please type second for kronometer...' }
         />
-        <Button
-          classname={ 'kronometer-start' }
-          onclick={ startKronometer }
-          buttonText={ 'START' }
-        />
-        <Button
-          classname={ 'kronometer-stop' }
-          onclick={ stopKronometer }
-          buttonText={ 'STOP' }
-        />
+        <div className="kronometer-buttons">
+          <Button
+            classname={ 'kronometer-start' }
+            onclick={ startKronometer }
+            buttonText={ 'START' }
+          />
+          <Button
+            classname={ 'kronometer-stop' }
+            onclick={ stopKronometer }
+            buttonText={ 'STOP' }
+          />
+        </div>
       </div>
     </div>
   );
