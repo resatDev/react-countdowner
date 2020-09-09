@@ -1,6 +1,7 @@
 const TEXTS = {
   KRONOMETER_TITLE: 'KRONOMETER',
   KRONOMETER_DEFINITION: 'This is basic kronometer for right now!',
+  KRONOMETER_FINISH: 'FINISH'
 };
 
 const INPUT_TEXTS = {

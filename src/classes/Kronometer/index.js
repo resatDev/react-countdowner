@@ -1,3 +1,9 @@
+import { KronometerConstant } from '../../constants';
+
+const {
+  KRONOMETER_FINISH
+} = KronometerConstant.TEXTS;
+
 /**
  * @class Kronometer
  * @definition: Kronometer Class that keeps all of the properties of Kronometer
@@ -59,7 +65,7 @@ class Kronometer {
 
   getFinishKronometerText = () => {
     if (this.isFinish) {
-      return 'Finish';
+      return KRONOMETER_FINISH;
     }
     return this.isFinish;
   }
