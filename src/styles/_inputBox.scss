@@ -1,0 +1,11 @@
+// input box component style
+$font-size: 15px;
+
+.inputBox {
+  min-width: 300px;
+  padding: 10px;
+  border-collapse: collapse;
+  border-radius: 15px;
+  border: 1px solid silver;
+  font-size: $font-size;
+} 

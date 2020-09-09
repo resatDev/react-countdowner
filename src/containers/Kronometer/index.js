@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Kronometer from '../../classes/Kronometer';
-import Button from '../../components/Button';
-import Input from '../../components/Input';
+import { Button, Input, TextBox } from '../../components/index';
 
 const NEW_KRONOMETER = new Kronometer();
 
@@ -22,29 +21,32 @@ const KronometerConteiner = () => {
   }, 1000);
 
   return (
-    <>
-      <div>
-        Kronometer
+    <div className='kronometer-container'>
+      <div className="kronometer-wrapper">
+        <div className="kronometer-texts">
+          <TextBox
+            title={ 'Kronometer' }
+            definition={ 'This is basic kronometer for right now!' }
+            DOMSecond={ DOMSecond }
+          />
+        </div>
+        <Input
+          classname={ 'kronometer-input'}
+          onblur={ (userTime) => setSecond(userTime)}
+          placeholder={ 'Please type second for kronometer' }
+        />
+        <Button
+          classname={ 'kronometer-start' }
+          onclick={ startKronometer }
+          buttonText={ 'START' }
+        />
+        <Button
+          classname={ 'kronometer-stop' }
+          onclick={ stopKronometer }
+          buttonText={ 'STOP' }
+        />
       </div>
-      <div>
-        { DOMSecond }
-      </div>
-      <Input
-        classname={ 'kronometer-input'}
-        onblur={ (userTime) => setSecond(userTime)}
-        placeholder={ 'Please type second for kronometer' }
-      />
-      <Button
-        classname={ 'kronometer-start' }
-        onclick={ startKronometer }
-        buttonText={ 'START' }
-      />
-      <Button
-        classname={ 'kronometer-stop' }
-        onclick={ stopKronometer }
-        buttonText={ 'STOP' }
-      />
-    </>
+    </div>
   );
 };
 

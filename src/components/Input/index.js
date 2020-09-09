@@ -7,13 +7,14 @@ const Input = ({
   placeholder
 }) => {
   return (
-    <>
+    <div className='inputBox-container'>
       <input
-        className={ classname }
+        className={ 'inputBox ' + classname }
         onBlur={ (e) => onblur(e.target.value)}
         placeholder={ placeholder }
+        type='number'
       />
-    </>
+    </div>
   );
 };
 

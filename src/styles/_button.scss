@@ -1,0 +1,20 @@
+// Button component styles
+
+$button_color: #004785;
+$button_text_color: #fff;
+$button_font_size: 20px;
+
+.button {
+  width: 150px;
+  height: 150px;
+  background-color: $button_color;
+  border-collapse: collapse;
+  border: none;
+  border-radius: 50%;
+  color: $button_text_color;
+  font-size: $button_font_size;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

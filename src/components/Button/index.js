@@ -9,7 +9,7 @@ const Button = ({
   return (
     <>
       <button
-        className={ classname }
+        className={ 'button ' + classname }
         onClick={ () => onclick()}
       >
         { buttonText }

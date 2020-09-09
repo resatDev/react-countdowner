@@ -1,0 +1,17 @@
+// kronometer container style
+
+$background_color: #d4ebff;
+
+.kronometer-container {
+  width: 100%;
+  min-height: 100vh;
+  background: $background_color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .kronometer-wrapper {
+    width: 50%;
+    height: 50%;
+  }
+}
