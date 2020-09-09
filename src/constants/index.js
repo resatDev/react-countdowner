@@ -1,5 +1,5 @@
-import { testConstant } from './testConstans';
+import * as KronometerConstant from './KronometerConstant';
 
-export default {
-  testConstant
+export {
+  KronometerConstant
 };
