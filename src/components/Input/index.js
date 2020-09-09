@@ -1,3 +1,4 @@
+import { func, string } from 'prop-types';
 import React from 'react';
 
 const Input = ({
@@ -14,6 +15,18 @@ const Input = ({
       />
     </>
   );
+};
+
+Input.propTypes = {
+  classname: string,
+  onblur: func,
+  placeholder: string
+};
+
+Input.defaultProps = {
+  classname: '',
+  onblur: () => {},
+  placeholder: ''
 };
 
 export default Input;
