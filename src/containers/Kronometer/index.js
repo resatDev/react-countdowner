@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import Kronometer from '../../classes/Kronometer';
 import Button from '../../components/Button';
+import Input from '../../components/Input';
 
-const NEW_KRONOMETER = new Kronometer(15);
+const NEW_KRONOMETER = new Kronometer();
 
 const {
   getSecond,
+  setSecond,
   startKronometer,
   endKronometer,
   stopKronometer
@@ -27,6 +29,11 @@ const KronometerConteiner = () => {
       <div>
         { DOMSecond }
       </div>
+      <Input
+        classname={ 'kronometer-input'}
+        onblur={ (userTime) => setSecond(userTime)}
+        placeholder={ 'Please type second for kronometer' }
+      />
       <Button
         classname={ 'kronometer-start' }
         onclick={ startKronometer }

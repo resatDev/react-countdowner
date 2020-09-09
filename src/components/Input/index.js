@@ -1,10 +1,18 @@
 import React from 'react';
 
-const Input = () => {
+const Input = ({
+  classname,
+  onblur,
+  placeholder
+}) => {
   return (
-    <div>
-      Input
-    </div>
+    <>
+      <input
+        className={ classname }
+        onBlur={ (e) => onblur(e.target.value)}
+        placeholder={ placeholder }
+      />
+    </>
   );
 };
 
