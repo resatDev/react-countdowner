@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
+import TimerContainer from './containers';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      Initial App
+      <TimerContainer />
     </div>
   );
-}
+};
 
 export default App;

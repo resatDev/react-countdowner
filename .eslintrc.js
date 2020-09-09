@@ -20,5 +20,10 @@ module.exports = {
   "rules": {
     "indent": ["error", 2],
     "semi": [2, "always"]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 };
