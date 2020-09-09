@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import Kronometer from '../Kronometer';
+import React, { useState } from 'react';
+import KronometerConteiner from '../Kronometer';
 
 const SITES = {
-  kronometer: Kronometer
+  kronometer: KronometerConteiner
 };
 
 const SiteMap = () => {
