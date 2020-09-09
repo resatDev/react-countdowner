@@ -7,6 +7,8 @@ const TextBox = ({
   DOMSecond,
   finishText
 }) => {
+
+  const timeText = finishText !== 'no' ? finishText : DOMSecond;
   return (
     <>
       <div className='textbox-title'>
@@ -16,7 +18,7 @@ const TextBox = ({
         { definition}
       </div>
       <div className="textbox-remainingTime">
-        { finishText || DOMSecond }
+        { timeText }
       </div>
     </>
   );

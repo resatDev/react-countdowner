@@ -14,21 +14,25 @@ class Kronometer {
    * 
    * @param {number} second 
    */
-  constructor(second) {
+  constructor(second = 0) {
     this.second = second;
     this.timeInterval = null;
-    this.isFinish = null;
+    this.isFinish = 'no';
 
     this.setSecond = this.setSecond.bind(this);
     this.setKronometer = this.setKronometer.bind(this);
     this.startKronometer = this.startKronometer.bind(this);
+    this.stopKronometer = this.stopKronometer.bind(this);
+    this.endKronometer = this.endKronometer.bind(this);
+    this.resetKronometer = this.resetKronometer.bind(this);
+    this.getFinishKronometerText = this.getFinishKronometerText.bind(this);
   }
 
   /**
    * 
    * @param {number} second 
    */
-  setSecond = (second) => {
+  setSecond = (second = null) => {
     this.second = second;
   };
 
@@ -47,6 +51,9 @@ class Kronometer {
   // start kronometer timer
   startKronometer = () => {
     this.timeInterval = setInterval(() => {
+      if (this.second === 0) {
+        this.isFinish = 'yes';
+      }
       this.second = this.setKronometer();
     }, 1000);
     return this.timeInterval;
@@ -60,14 +67,24 @@ class Kronometer {
   // finish kronometer timer
   endKronometer = () => {
     clearInterval(this.timeInterval);
-    this.isFinish = true;
+    this.isFinish = 'yes';
+  }
+
+  // reset kronometer timer
+  resetKronometer = () => {
+    this.isFinish = 'no';
+    this.second = null;
   }
 
   getFinishKronometerText = () => {
-    if (this.isFinish) {
+    if (this.isFinish !== 'no') {
       return KRONOMETER_FINISH;
     }
     return this.isFinish;
+  }
+
+  isTimerFinish = () => {
+    return this.isFinish === 'yes';
   }
 }
 

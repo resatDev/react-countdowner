@@ -10,6 +10,8 @@ const {
   startKronometer,
   endKronometer,
   stopKronometer,
+  resetKronometer,
+  isTimerFinish,
   getFinishKronometerText
 } = NEW_KRONOMETER;
 
@@ -17,7 +19,7 @@ const KronometerConteiner = () => {
   const [DOMSecond, setDOMSecond] = useState(0);
   
   setInterval(() => {
-    if (getSecond() <= 0) endKronometer();
+    if (isTimerFinish() && getSecond() <= 0) endKronometer();
     setDOMSecond(getSecond());
   }, 1000);
 
@@ -27,6 +29,7 @@ const KronometerConteiner = () => {
         setSecond={ setSecond }
         startKronometer={ startKronometer }
         stopKronometer={ stopKronometer }
+        resetKronometer={ resetKronometer }
         DOMSecond={ DOMSecond }
         finishText={getFinishKronometerText()}
       />

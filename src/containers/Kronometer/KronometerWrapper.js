@@ -14,7 +14,8 @@ const {
 
 const {
   KRONOMETER_BUTTON_START_TEXT,
-  KRONOMETER_BUTTON_STOP_TEXT
+  KRONOMETER_BUTTON_STOP_TEXT,
+  KRONOMETER_BUTTON_RESET_TEXT
 } = KronometerConstant.BUTTON_TEXT;
 
 const KronometerWrapper = ({
@@ -22,6 +23,7 @@ const KronometerWrapper = ({
   DOMSecond,
   startKronometer,
   stopKronometer,
+  resetKronometer,
   finishText
 }) => {
 
@@ -51,6 +53,11 @@ const KronometerWrapper = ({
           onclick={ stopKronometer }
           buttonText={ KRONOMETER_BUTTON_STOP_TEXT }
         />
+        <Button
+          classname={ 'kronometer-reset' }
+          onclick={ resetKronometer }
+          buttonText={ KRONOMETER_BUTTON_RESET_TEXT }
+        />
       </div>
     </div>
   );
@@ -61,6 +68,7 @@ KronometerWrapper.propTypes = {
   DOMSecond: number,
   startKronometer: func,
   stopKronometer: func,
+  resetKronometer: func,
   finishText: string
 };
 
@@ -69,6 +77,7 @@ KronometerWrapper.defaultProps = {
   DOMSecond: 0,
   startKronometer: () => {},
   stopKronometer: () => {},
+  resetKronometer: () => {},
   finishText: ''
 };
 
