@@ -1,3 +1,4 @@
+import { func, number, string } from 'prop-types';
 import React from 'react';
 import { Button, Input, TextBox } from '../../components';
 import { KronometerConstant } from '../../constants';
@@ -20,7 +21,8 @@ const KronometerWrapper = ({
   setSecond,
   DOMSecond,
   startKronometer,
-  stopKronometer
+  stopKronometer,
+  finishText
 }) => {
 
   return (
@@ -30,6 +32,7 @@ const KronometerWrapper = ({
           title={ KRONOMETER_TITLE }
           definition={ KRONOMETER_DEFINITION }
           DOMSecond={ DOMSecond || 0}
+          finishText={ finishText }
         />
       </div>
       <Input
@@ -51,6 +54,22 @@ const KronometerWrapper = ({
       </div>
     </div>
   );
+};
+
+KronometerWrapper.propTypes = {
+  setSecond: func,
+  DOMSecond: number,
+  startKronometer: func,
+  stopKronometer: func,
+  finishText: string
+};
+
+KronometerWrapper.defaultProps = {
+  setSecond: () => {},
+  DOMSecond: 0,
+  startKronometer: () => {},
+  stopKronometer: () => {},
+  finishText: ''
 };
 
 export default KronometerWrapper;

@@ -11,6 +11,7 @@ class Kronometer {
   constructor(second) {
     this.second = second;
     this.timeInterval = null;
+    this.isFinish = null;
 
     this.setSecond = this.setSecond.bind(this);
     this.setKronometer = this.setKronometer.bind(this);
@@ -53,10 +54,14 @@ class Kronometer {
   // finish kronometer timer
   endKronometer = () => {
     clearInterval(this.timeInterval);
+    this.isFinish = true;
   }
 
   getFinishKronometerText = () => {
-    return 'Finish';
+    if (this.isFinish) {
+      return 'Finish';
+    }
+    return this.isFinish;
   }
 }
 

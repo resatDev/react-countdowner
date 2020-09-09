@@ -27,7 +27,8 @@ const KronometerConteiner = () => {
         setSecond={ setSecond }
         startKronometer={ startKronometer }
         stopKronometer={ stopKronometer }
-        DOMSecond={ DOMSecond !== 0 ? DOMSecond : getFinishKronometerText() }
+        DOMSecond={ DOMSecond }
+        finishText={getFinishKronometerText()}
       />
     </div>
   );

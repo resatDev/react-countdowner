@@ -4,7 +4,8 @@ import React from 'react';
 const TextBox = ({
   title,
   definition,
-  DOMSecond
+  DOMSecond,
+  finishText
 }) => {
   return (
     <>
@@ -15,7 +16,7 @@ const TextBox = ({
         { definition}
       </div>
       <div className="textbox-remainingTime">
-        { DOMSecond }
+        { finishText || DOMSecond }
       </div>
     </>
   );
@@ -24,13 +25,15 @@ const TextBox = ({
 TextBox.propTypes = {
   title: string,
   definition: string,
-  DOMSecond: number
+  DOMSecond: number,
+  finishText: string
 };
 
 TextBox.defaulProps = {
   title: '',
   definition: '',
-  DOMSecond: 0
+  DOMSecond: 0,
+  finishText: ''
 };
 
 export default TextBox;
