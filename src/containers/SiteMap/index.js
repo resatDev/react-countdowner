@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Kronometer from '../Kronometer';
+
+const SITES = {
+  kronometer: Kronometer
+};
 
 const SiteMap = () => {
+  const [pageID, setPageID] = useState(0);
+
+  // initially set for kronometer
+  const activePageID = pageID || 'kronometer';
+
+  const ActiveScreen = SITES[activePageID];
+
   return (
-    <div>Site MAp</div>
+    <ActiveScreen
+      onActivePage={ (pageID) => setPageID(pageID) }
+    />
   );
 };
 
